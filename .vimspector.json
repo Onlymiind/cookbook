@@ -1,0 +1,24 @@
+{
+    "configurations": {
+        "tests": {
+            "adapter": "CodeLLDB",
+            "filetypes": [
+                "cpp"
+            ],
+            "default": true,
+            "configuration": {
+                "request": "launch",
+                "protocol": "auto",
+                "stopOnEntry": false,
+                "console": "integratedTerminal",
+                "program": "${workspaceRoot}/build/cookbook",
+		"MIMode": "gdb",
+		"setupCommands": [{
+			"description": "enable pretty-printing",
+			"text": "-enable-pretty-printing",
+			"ignoreFailures": true
+		}]
+            }
+        }
+    }
+}
